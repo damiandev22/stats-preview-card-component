@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
 
-/* font-family: 'Inter', sans-serif;
-font-family: 'Lexend Deca', sans-serif;*/
-
+/* Here starts the CSS Reset Style */
 
 /* Box sizing rules */
 *,
@@ -83,42 +81,33 @@ select {
   }
 }
 
+/* The end of the CSS Reset Style */
+
+/* Here starts My Layout */
+
 .container{
-  max-width: 1110px;
-  max-height: 448px;
+  max-width: 69.375rem;
+  max-height: 28rem;
   display: flex;
-  /* background-color: blueviolet; */
-  margin: auto 2rem;
-  border-width: 0px;
+  margin: auto 1.5rem;
   overflow: hidden;
-
+  border-radius: 0.5rem;
 }
-
-article>*{
-  flex-basis: 50%;
-}
-
 
 .left{
   background-color: hsl(244, 38%, 16%);
-  /* height: 100%; */
-  /* width: 50%; */
-  /* width: max(48.65%, 570px); */
-  /* width: 48.65%;  */
- 
- 
-  /* width:550px;
-  height: 448px; */
- 
- 
-  /* padding: 80px 120px 65px 70px; */
+  width: 51.36%; 
+  height: 28rem; 
+  padding: 5rem 7.5rem 4.0625rem 4.375rem;
 }
 
 h1{
   font-family: 'Inter', sans-serif;
   color: hsl(0, 0%, 100%);
-  font-size: 28px;
-  line-height: 1.2;
+  font-size: 2.1875rem;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+  font-weight: 700;
 }
 
 h3,p{
@@ -130,41 +119,106 @@ h3,p{
 }
 
 p{
-    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Inter', sans-serif;
+
+
+    font-weight: 400;
+    font-size: 0.9375rem;
+    margin-bottom: 4.5rem;
+    color: hsla(0, 0%, 100%, 0.6);
+    line-height: 1.7;
 }
 
 .detail{
   display: flex;
-  
+}
+
+h3{
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .detail p{
   text-transform: uppercase;
+  font-family: 'Lexend Deca', sans-serif;
+  margin-right: 4.0625rem;
+  color: hsla(0, 0%, 100%, 0.6);
+  font-weight: 400;
+  font-size: 0.8125rem;
 }
 
-.right{
-  /* height: 100%; */
-  /* width: 51.35%; */
-  /* width: 50%; */
-
-  /* width:550px;
-  height: 448px; */
-  
-  
-   /* background-color: chartreuse; */
-
-
-  /* background-image: url(../images/image-header-desktop.jpg);
-  background-repeat: no-repeat;
-  background-size: cover; */
+picture{
+  width: 48.64%;
+  width: 100%;
+  background: hsla(277, 64%, 61%);
 }
 
 img{
-  width: 100%;
-  height: 100%;
   object-fit: cover;
-  /* height: 100%; */
-  /* max-width: 51.35%; */
-  /* width: 100%;
-  object-fit: cover; */
+  height: 100%;
+  width: 100%;
+  opacity: 0.73;
+  mix-blend-mode: multiply;
+}
+
+
+/* max-width: 1132px*/
+
+@media (max-width: 70.75rem ){
+  .left{
+    /* padding: 2.5rem 3.75rem 2.03125rem 2.1875rem; */
+    padding: 3rem 5.5rem 2.0625rem 2.375rem;
+  } 
+}
+
+/* max-width: 915px*/
+
+@media (max-width: 57.1875rem ){
+  .left{
+    padding: 1.5rem 2.75rem 1.03125rem 1.1875rem;
+  } 
+}
+
+/* max-width: 768px*/
+
+@media (max-width: 48rem ){
+  .container{
+    max-width: 69.375rem;
+    max-height: 56rem;
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 5.625rem 1.5rem;
+  }
+
+  .left{
+    padding: 2.8125rem 34px 2.375rem;
+    width: 100%;
+    height: 33.75rem;
+    text-align: center;
+  } 
+
+  h1{
+    font-size: 27px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+
+  .left>p{
+    font-size: 15px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-weight: 400;
+  }
+
+  .detail{
+    flex-direction: column;
+    row-gap: 28px;
+  }
+
+  .detail p{
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
 }
