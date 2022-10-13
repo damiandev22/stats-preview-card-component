@@ -42,7 +42,7 @@ The use of `mix-blend-mode: multiply;` and the background-color on the parent in
 
 ### Continued development
 
-I need to keeo using mix-blend-mode
+I need to keep using mix-blend-mode.
 
 -
 
